@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="Калькулятор"
+        android:titleTextColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/editTextET"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:enabled="false"
+        android:hint="input"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:hint="result"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <GridLayout
+        android:id="@+id/keyboardGrid"
+        android:layout_width="match_parent"
+        android:layout_height="483dp"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:padding="16dp"
+        android:rowCount="5">
+
+        <!-- Клавиши 1-9 и операции -->
+        <!-- Первая строка -->
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="1"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="2"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="3"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onOperationClick"
+            android:text="/"
+            android:textSize="30sp"/>
+
+        <!-- Вторая строка -->
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="4"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="5"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="6"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onOperationClick"
+            android:text="*"
+            android:textSize="30sp"/>
+
+        <!-- Третья строка -->
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="7"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="8"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="9"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onOperationClick"
+            android:text="-"
+            android:textSize="30sp"/>
+
+        <!-- Четвертая строка -->
+        <Button
+            style="@style/CalculatorButton"
+            android:onClick="onDigitClick"
+            android:text="0"
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:layout_columnSpan="2"
+            android:onClick="onEqualClick"
+            android:text="="
+            android:textSize="30sp"/>
+
+        <Button
+            style="@style/CalculatorButton"
+            android:layout_rowSpan="2"
+            android:onClick="onOperationClick"
+            android:text="+"
+            android:textSize="30sp"/>
+
+        <!-- Пятая строка -->
+        <Button
+            style="@style/CalculatorButton"
+            android:layout_columnSpan="4"
+            android:onClick="onResetClick"
+            android:text="reset"
+            android:textSize="30sp" />
+    </GridLayout>
+</LinearLayout>
